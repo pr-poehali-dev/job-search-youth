@@ -141,7 +141,7 @@ export default function Index() {
                 <Icon name="Home" size={18} className="mr-2" />
                 Главная
               </Button>
-              <Button variant="ghost" className="font-medium">
+              <Button variant="ghost" className="font-medium" onClick={() => window.location.href = '/profile'}>
                 <Icon name="User" size={18} className="mr-2" />
                 Профиль
               </Button>
@@ -154,7 +154,7 @@ export default function Index() {
                 Помощь
               </Button>
             </nav>
-            <Button className="bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity">
+            <Button className="bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity" onClick={() => window.location.href = '/profile'}>
               Создать резюме
             </Button>
           </div>

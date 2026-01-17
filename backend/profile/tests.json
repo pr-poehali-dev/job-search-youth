@@ -6,25 +6,24 @@
       "path": "/",
       "expectedStatus": 200,
       "expectedBody": {
-        "users": "array"
+        "users": [
+          {
+            "id": 1,
+            "email": "test@example.com"
+          }
+        ]
       },
       "bodyMatcher": "partial"
     },
     {
-      "name": "Create new user",
-      "method": "POST",
-      "path": "/",
-      "body": {
-        "email": "test@example.com",
-        "full_name": "Тестовый Пользователь",
-        "age": 18,
-        "city": "Москва",
-        "skills": ["JavaScript", "React"]
-      },
-      "expectedStatus": 201,
+      "name": "Get single user",
+      "method": "GET",
+      "path": "/?user_id=1",
+      "expectedStatus": 200,
       "expectedBody": {
-        "id": "number",
-        "message": "string"
+        "id": 1,
+        "email": "test@example.com",
+        "full_name": "Тестовый Пользователь"
       },
       "bodyMatcher": "partial"
     }
